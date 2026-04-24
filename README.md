@@ -30,12 +30,12 @@ The goal was not to build a huge environment. The goal was to understand how AWS
 - Observed sign-in activity, IAM-related setup actions, and account changes
 - Created a trail for ongoing log delivery
 - Verified CloudTrail setup activity through real event records
-- Reviewed JSON event scripts to understand how AWS represented actions and policies
+- Reviewed raw JSON event scripts to understand how AWS represented actions and policies
 
 ### 3. Studied detection with GuardDuty
 - Enabled GuardDuty in the lab account
 - Generated and reviewed sample findings
-- Compared low-severity policy findings with higher-severity attacks findings
+- Compared low-severity policy findings with higher-severity attack findings
 - Learned that severity alone is not enough and that findings need context, affected resources, and signal correlation to be read correctly
 
 ### 4. Tested prevention with S3 Block Public Access
@@ -51,7 +51,7 @@ The goal was not to build a huge environment. The goal was to understand how AWS
 CloudTrail showed me the difference between **event history** and a **trail**. Event history gave short-term visibility into recent management activity, while the trail created ongoing log delivery to S3 for longer-term evidence collection.
 
 ### GuardDuty
-GuardDuty taught me how AWS moves from raw activity to factual findings. The main lesson was that a finding is not automatically proof of compromise. Severity matters, but resource context, signal correlation, identity details, and event patterns matter more.
+GuardDuty taught me how AWS moves from raw activity to interpreted findings. The main lesson was that a simple finding is not automatically proof of compromise. Severity matters, but resource context, signal correlation, identity details, and event patterns matter more.
 
 ### S3 Block Public Access
 This phase made the clearest prevention point in the lab: a bucket policy existing does not mean a bucket is public. AWS allowed the CloudTrail service-specific bucket policy because it was non-public, but blocked my attempt to save a public-read style policy.
