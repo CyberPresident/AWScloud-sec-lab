@@ -4,7 +4,7 @@
 - Event history was already available before I created a trail.
 - Event history showed recent management activity tied to my account setup.
 - My sign-in flow appeared in CloudTrail.
-- IAM-related setup actions also appeared in the event list.
+- IAM related setup actions also appeared in the event list.
 - Event history is useful evidence, but it is not the same thing as a trail.
 
 ## Events I saw
